@@ -2,11 +2,8 @@ package com.example.administrator.mvpdemo.service.entity;
 
 import java.util.List;
 
-/**
- * Created by win764-1 on 2016/12/12.
- */
 
-public class Book {
+public class Book extends BaseData {
 
     /**
      * count : 3

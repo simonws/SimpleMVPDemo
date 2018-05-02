@@ -1,19 +1,18 @@
 package com.example.administrator.mvpdemo.ui.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
-import com.example.administrator.mvpdemo.service.entity.Book;
-import com.example.administrator.mvpdemo.service.presenter.Presenter;
-import com.example.administrator.mvpdemo.service.view.BookView;
+import com.example.administrator.mvpdemo.service.presenter.IPresenter;
+import com.example.administrator.mvpdemo.service.view.IView;
 
 /**
  * Created by ws on 18-5-2.
  */
 
-public abstract class BaseActivity extends AppCompatActivity implements BookView {
-    protected Presenter presenter;
+public abstract class BaseActivity<T extends IPresenter> extends Activity implements IView {
+    protected T presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,5 +31,5 @@ public abstract class BaseActivity extends AppCompatActivity implements BookView
         }
     }
 
-    protected abstract Presenter createPresenter();
+    protected abstract T createPresenter();
 }

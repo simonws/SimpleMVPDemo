@@ -1,2 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_3d58de7faf980e68fcece22fa5d383f44d0eb3c3.jar" />
+    </item>
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_6bda552404df6463297ba820e1bee0211f67a551.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/okio-1.8.0_6e4818feb6170abec74c69b32deab3f522f0e054.jar" />
+    </item>
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_24a708e836c4afbc4997580923be3494e526a4d4.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_891fe43847f24de32562e0a0a7a99ec1e587ee03.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.5/ece7b5d0870e66d8226dab6dcf47a2b12afff061/rxjava-1.1.5.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="ece7b5d0870e66d8226dab6dcf47a2b12afff061">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/rxjava-1.1.5_e072c75bb52e95e5c830076144667c1f23083219.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_020ade07a9d9d8a367b25caaaf16e496b2e90ceb.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/gson-2.7_13591695aa1e59bd97eb5cc37b6ad6fc3752b8c8.jar" />
+    </item>
+    <item
+        jar="/media/ws/NEW_DISK/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_60b949d7e85fd0a8c85bac2cbdb810162fa591ff.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_3aa63e31b3da2bd109f2be3514dcffc28ce7ae5c.jar" />
+    </item>
+    <item
+        jar="/home/ws/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_80ecacd610597b2d7c095083a2eba9a14f5d869e.jar" />
+    </item>
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_ac70d9cf423eed943e223c99ab4ef77cdef1affc.jar" />
+    </item>
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="927e8ef5711b115b65b2f35495d77352be2b3c09">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.0_4f116a78aba5d6d1b2c38d27e4cb3591f63ba777.jar" />
+    </item>
+    <item
+        jar="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/ws/project/my_github/SimpleMVPDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_5b812b1ccdc923aef072932012bce03416de8951.jar" />
+    </item>
+
+</items>

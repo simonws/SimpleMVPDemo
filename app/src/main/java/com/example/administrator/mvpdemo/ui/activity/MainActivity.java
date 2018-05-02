@@ -1,6 +1,5 @@
 package com.example.administrator.mvpdemo.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,13 +9,9 @@ import android.widget.Toast;
 import com.example.administrator.mvpdemo.R;
 import com.example.administrator.mvpdemo.service.entity.Book;
 import com.example.administrator.mvpdemo.service.presenter.BookPresenter;
-import com.example.administrator.mvpdemo.service.presenter.Presenter;
-import com.example.administrator.mvpdemo.service.view.BookView;
+import com.example.administrator.mvpdemo.service.presenter.PresenterFactory;
 
-import rx.Observable;
-import rx.Subscriber;
-
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity<BookPresenter> {
 
     private TextView text;
     private Button button;
@@ -36,9 +31,10 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    protected Presenter createPresenter() {
-        return new BookPresenter();
+    protected BookPresenter createPresenter() {
+        return PresenterFactory.getBookPresenter();
     }
+
 
     @Override
     public void onSuccess(Book mBook) {
