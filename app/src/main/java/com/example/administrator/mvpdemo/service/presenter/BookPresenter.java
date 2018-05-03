@@ -16,7 +16,7 @@ public class BookPresenter extends BasePresenter<Book, MainActivity> {
             @Override
             public void onCompleted() {
                 if (mData != null && mViewReference.get() != null) {
-                    mViewReference.get().onBookData();
+                    mViewReference.get().onBookData(mData);
                 }
             }
 
