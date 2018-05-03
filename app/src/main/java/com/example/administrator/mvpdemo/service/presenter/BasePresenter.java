@@ -9,7 +9,18 @@ import java.lang.ref.WeakReference;
  * Created by ws on 18-5-2.
  */
 
-public abstract class BasePresenter<D extends BaseData> implements IPresenter {
+public abstract class BasePresenter<D extends BaseData, V extends IView> {
     protected D mData;
-    protected WeakReference<IView> mViewReference;
+    protected WeakReference<V> mViewReference;
+
+
+    public void detachView() {
+        if (mViewReference != null) {
+            mViewReference.clear();
+        }
+    }
+
+    public void attachView(V view) {
+        mViewReference = new WeakReference<>(view);
+    }
 }

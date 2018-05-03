@@ -1,14 +1,15 @@
 package com.example.administrator.mvpdemo.service.view;
 
+import com.example.administrator.mvpdemo.service.entity.BaseData;
 import com.example.administrator.mvpdemo.service.entity.Book;
 
 /**
  * Created by win764-1 on 2016/12/12.
  */
 
-public interface IView {
+public interface IView<T extends BaseData> {
 
-    void onSuccess(Book book);
+    void onSuccess(T book);
 
     void onError(String result);
 }

@@ -7,11 +7,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.mvpdemo.R;
+import com.example.administrator.mvpdemo.service.entity.BaseData;
 import com.example.administrator.mvpdemo.service.entity.Book;
 import com.example.administrator.mvpdemo.service.presenter.BookPresenter;
 import com.example.administrator.mvpdemo.service.presenter.PresenterFactory;
+import com.example.administrator.mvpdemo.service.view.IBookView;
 
-public class MainActivity extends BaseActivity<BookPresenter> {
+public class MainActivity extends BaseActivity<BookPresenter, Book> implements IBookView<Book> {
 
     private TextView text;
     private Button button;
@@ -41,8 +43,15 @@ public class MainActivity extends BaseActivity<BookPresenter> {
         text.setText(mBook.toString());
     }
 
+
     @Override
     public void onError(String result) {
         Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public void onBookData(Book data) {
+
     }
 }

@@ -1,11 +1,14 @@
 package com.example.administrator.mvpdemo.service.manager;
 
-import com.example.administrator.mvpdemo.service.RetrofitHelper;
+import com.example.administrator.mvpdemo.service.RetrofitHelperFactory;
 import com.example.administrator.mvpdemo.service.RetrofitService;
 import com.example.administrator.mvpdemo.service.entity.Book;
 
 import rx.Observable;
+import rx.Observer;
 import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 
@@ -24,14 +27,26 @@ public class DataManager {
         return DataManagerHolder.sInstance;
     }
 
-    private RetrofitService mRetrofitService;
+    private RetrofitService.RetrofitBookService mBookService;
 
     private DataManager() {
-        mRetrofitService = RetrofitHelper.getInstance().getServer();
         mCompositeSubscription = new CompositeSubscription();
     }
 
-    public Observable<Book> getSearchBooks(String name, String tag, int start, int count) {
-        return mRetrofitService.getSearchBooks(name, tag, start, count);
+    private RetrofitService.RetrofitBookService getBookService() {
+        if (mBookService == null) {
+            mBookService = RetrofitHelperFactory.getDoubanHelper().getServer(RetrofitService.RetrofitBookService.class);
+        }
+        return mBookService;
+    }
+
+    public Subscription getSearchBooksA(String name, String tag, int start, int count, Observer<Book> observer) {
+        return getBookService().getSearchBooksA(name, tag, start, count).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(observer);
+    }
+
+    public Observable<Book> getSearchBooksB(String name, String tag, int start, int count, Observer<Book> observer) {
+        return getBookService().getSearchBooksB(name, tag, start, count);
     }
 }
