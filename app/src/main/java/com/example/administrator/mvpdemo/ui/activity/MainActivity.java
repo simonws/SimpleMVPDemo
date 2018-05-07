@@ -7,7 +7,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.mvpdemo.R;
-import com.example.administrator.mvpdemo.service.entity.BaseData;
 import com.example.administrator.mvpdemo.service.entity.Book;
 import com.example.administrator.mvpdemo.service.presenter.BookPresenter;
 import com.example.administrator.mvpdemo.service.presenter.PresenterFactory;
