@@ -4,15 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.example.administrator.mvpdemo.service.entity.BaseData;
-import com.example.administrator.mvpdemo.service.presenter.BasePresenter;
-import com.example.administrator.mvpdemo.service.view.IView;
+import com.example.administrator.mvpdemo.constant.presenter.BasePresenter;
+import com.example.administrator.mvpdemo.constant.iview.IView;
 
 /**
  * Created by ws on 18-5-2.
  */
 
-public abstract class BaseActivity<T extends BasePresenter, D extends BaseData> extends Activity implements IView<D> {
+public abstract class BaseActivity<T extends BasePresenter> extends Activity implements IView {
     protected T presenter;
 
     @Override
