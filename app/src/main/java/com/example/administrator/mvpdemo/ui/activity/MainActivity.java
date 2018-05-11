@@ -7,11 +7,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.mvpdemo.R;
-import com.example.administrator.mvpdemo.constant.bean.Book;
-import com.example.administrator.mvpdemo.constant.bean.PhoneData;
+import com.example.administrator.mvpdemo.constant.datamanager.network.retrofit.GitLoginData;
+import com.example.administrator.mvpdemo.constant.iview.IMainView;
 import com.example.administrator.mvpdemo.constant.presenter.MainPresenter;
 import com.example.administrator.mvpdemo.constant.presenter.PresenterFactory;
-import com.example.administrator.mvpdemo.constant.iview.IMainView;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements IMainView {
 
@@ -31,13 +30,14 @@ public class MainActivity extends BaseActivity<MainPresenter> implements IMainVi
         bookRequestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.fetchBookInfo("金瓶梅", null, 0, 1);
+//                presenter.fetchBookInfo("金瓶梅", null, 0, 1);
+                presenter.fetchLoginInfo("simonws");
             }
         });
 
 
         phoneTextView = (TextView) findViewById(R.id.book_view_id);
-        phoneRequestButton = (Button) findViewById(R.id.book_info_request);
+        phoneRequestButton = (Button) findViewById(R.id.phone_info_request);
         phoneRequestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,12 +58,12 @@ public class MainActivity extends BaseActivity<MainPresenter> implements IMainVi
 
 
     @Override
-    public void onBookDataSuccess(Book data) {
+    public void onBookDataSuccess(GitLoginData data) {
         bookTextView.setText(data.toString());
     }
 
     @Override
-    public void onPhoneDataSuccess(PhoneData data) {
+    public void onPhoneDataSuccess(GitLoginData data) {
         phoneTextView.setText(data.toString());
     }
 }

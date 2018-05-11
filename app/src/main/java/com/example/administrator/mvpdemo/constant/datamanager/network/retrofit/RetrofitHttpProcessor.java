@@ -1,5 +1,9 @@
 package com.example.administrator.mvpdemo.constant.datamanager.network.retrofit;
 
+import android.util.Log;
+
+import com.example.administrator.mvpdemo.constant.Constants;
+import com.example.administrator.mvpdemo.constant.datamanager.network.HttpCallBack;
 import com.example.administrator.mvpdemo.constant.datamanager.network.IHttpCallBack;
 import com.example.administrator.mvpdemo.constant.datamanager.network.IHttpProcessor;
 import com.google.gson.GsonBuilder;
@@ -19,6 +23,7 @@ import rx.schedulers.Schedulers;
  */
 
 public class RetrofitHttpProcessor implements IHttpProcessor {
+    private static final String TAG = "RetrofitHttpProcessor";
     private Retrofit.Builder builder;
     private OkHttpClient client = new OkHttpClient();
     private GsonConverterFactory factory = GsonConverterFactory.create(new GsonBuilder().create());
@@ -34,11 +39,10 @@ public class RetrofitHttpProcessor implements IHttpProcessor {
 
 
     @Override
-    public void get(String url, Map<String, String> params, final IHttpCallBack httpCallBack) {
-        Observer observer = new Observer<String>() {
+    public void get(String url, Map<String, String> params, final HttpCallBack httpCallBack) {
+        Observer observer = new Observer<GitLoginData>() {
             @Override
             public void onCompleted() {
-
             }
 
             @Override
@@ -47,20 +51,22 @@ public class RetrofitHttpProcessor implements IHttpProcessor {
             }
 
             @Override
-            public void onNext(String book) {
+            public void onNext(GitLoginData book) {
+//
+//                Log.d(TAG, "ok");
                 httpCallBack.onSuccess(book);
             }
         };
         mRetrofit = builder.baseUrl(url).build();
         mMainInterface = mRetrofit.create(RetrofitInterface.MainInterface.class);
-        mMainInterface.getInfo().
-            subscribeOn(Schedulers.io())
+        mMainInterface.getLoginName(params.get(Constants.param_user_key))
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(observer);
     }
 
     @Override
-    public void post(String url, Map<String, String> params, IHttpCallBack httpCallBack) {
+    public void post(String url, Map<String, String> params, HttpCallBack httpCallBack) {
 
     }
 }

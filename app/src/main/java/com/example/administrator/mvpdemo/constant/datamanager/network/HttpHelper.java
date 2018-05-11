@@ -18,14 +18,13 @@ public class HttpHelper implements IHttpProcessor {
         return sInstance;
     }
 
-
     @Override
-    public void get(String url, Map<String, String> params, IHttpCallBack httpCallBack) {
+    public void get(String url, Map<String, String> params, HttpCallBack httpCallBack) {
         httpProcessor.get(url, params, httpCallBack);
     }
 
     @Override
-    public void post(String url, Map<String, String> params, IHttpCallBack httpCallBack) {
+    public void post(String url, Map<String, String> params, HttpCallBack httpCallBack) {
         httpProcessor.post(url, params, httpCallBack);
     }
 }

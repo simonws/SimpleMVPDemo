@@ -105,6 +105,7 @@
     <orderEntry type="library" exported="" name="io.reactivex:rxjava:1.1.5@jar" level="project" />
     <orderEntry type="library" exported="" name="com.squareup.retrofit2:adapter-rxjava:2.1.0@jar" level="project" />
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.7@jar" level="project" />
+    <orderEntry type="library" exported="" name="eu.the4thfloor.volley:com.android.volley:2015.05.28@jar" level="project" />
     <orderEntry type="library" exported="" name="com.squareup.retrofit2:converter-gson:2.1.0@jar" level="project" />
   </component>
 </module>
