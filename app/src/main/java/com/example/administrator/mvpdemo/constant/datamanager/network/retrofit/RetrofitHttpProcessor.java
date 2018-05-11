@@ -2,9 +2,14 @@ package com.example.administrator.mvpdemo.constant.datamanager.network.retrofit;
 
 import com.example.administrator.mvpdemo.constant.datamanager.network.IHttpCallBack;
 import com.example.administrator.mvpdemo.constant.datamanager.network.IHttpProcessor;
+import com.google.gson.GsonBuilder;
 
 import java.util.Map;
 
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -13,13 +18,23 @@ import rx.schedulers.Schedulers;
  * Created by ws on 18-5-10.
  */
 
-public class retrofitHttpProcessor implements IHttpProcessor {
+public class RetrofitHttpProcessor implements IHttpProcessor {
+    private Retrofit.Builder builder;
+    private OkHttpClient client = new OkHttpClient();
+    private GsonConverterFactory factory = GsonConverterFactory.create(new GsonBuilder().create());
+    private Retrofit mRetrofit = null;
+    private RetrofitInterface.MainInterface mMainInterface;
 
-    private RetrofitInterface.MainInterface mBookService;
+    public RetrofitHttpProcessor() {
+        builder = new Retrofit.Builder()
+            .client(client)
+            .addConverterFactory(factory)
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create());
+    }
+
 
     @Override
     public void get(String url, Map<String, String> params, final IHttpCallBack httpCallBack) {
-
         Observer observer = new Observer<String>() {
             @Override
             public void onCompleted() {
@@ -36,18 +51,12 @@ public class retrofitHttpProcessor implements IHttpProcessor {
                 httpCallBack.onSuccess(book);
             }
         };
-
-        //name, tag, start, count
-        getBookService().getBookInfo(params.get("name"), params.get("tag"), Integer.parseInt(params.get("start")), Integer.parseInt(params.get("count"))).subscribeOn(Schedulers.io())
+        mRetrofit = builder.baseUrl(url).build();
+        mMainInterface = mRetrofit.create(RetrofitInterface.MainInterface.class);
+        mMainInterface.getInfo().
+            subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(observer);
-    }
-
-    private RetrofitInterface.MainInterface getBookService() {
-        if (mBookService == null) {
-            mBookService = RetrofitHelperFactory.getDoubanHelper().getServer(RetrofitInterface.MainInterface.class);
-        }
-        return mBookService;
     }
 
     @Override
