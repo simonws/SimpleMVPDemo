@@ -10,28 +10,27 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:id="@+id/book_info_request"
+        android:id="@+id/login_info_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="getFollowers"
-        android:text="请求书籍信息" />
+        android:text="请求登录信息" />
 
     <TextView
-        android:id="@+id/book_view_id"
+        android:id="@+id/login_text_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
 
     <Button
-        android:id="@+id/phone_info_request"
+        android:id="@+id/book_info_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="getFollowers"
-        android:text="请求电话信息" />
+        android:text="请求书籍信息" />
+
 
     <TextView
-        android:id="@+id/phone_view_id"
+        android:id="@+id/book_text_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />

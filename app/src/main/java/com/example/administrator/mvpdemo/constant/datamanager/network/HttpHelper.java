@@ -19,8 +19,8 @@ public class HttpHelper implements IHttpProcessor {
     }
 
     @Override
-    public void get(String url, Map<String, String> params, HttpCallBack httpCallBack) {
-        httpProcessor.get(url, params, httpCallBack);
+    public void get(String url, HttpCallBack httpCallBack) {
+        httpProcessor.get(url, httpCallBack);
     }
 
     @Override

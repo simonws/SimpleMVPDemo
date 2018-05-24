@@ -14,31 +14,30 @@ import com.example.administrator.mvpdemo.constant.presenter.PresenterFactory;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements IMainView {
 
-    private TextView bookTextView;
-    private Button bookRequestButton;
+    private TextView mLoginInfo;
+    private Button mLoginRequestButton;
 
 
-    private TextView phoneTextView;
-    private Button phoneRequestButton;
+    private TextView mBookInfo;
+    private Button mBookRequestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bookTextView = (TextView) findViewById(R.id.book_view_id);
-        bookRequestButton = (Button) findViewById(R.id.book_info_request);
-        bookRequestButton.setOnClickListener(new View.OnClickListener() {
+        mLoginInfo = (TextView) findViewById(R.id.login_text_id);
+        mLoginRequestButton = (Button) findViewById(R.id.login_info_request);
+        mLoginRequestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                presenter.fetchBookInfo("金瓶梅", null, 0, 1);
                 presenter.fetchLoginInfo("simonws");
             }
         });
 
 
-        phoneTextView = (TextView) findViewById(R.id.book_view_id);
-        phoneRequestButton = (Button) findViewById(R.id.phone_info_request);
-        phoneRequestButton.setOnClickListener(new View.OnClickListener() {
+        mBookInfo = (TextView) findViewById(R.id.book_text_id);
+        mBookRequestBtn = (Button) findViewById(R.id.book_info_request);
+        mBookRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.fetchPhoneInfo("金瓶梅", null, 0, 1);
@@ -59,11 +58,19 @@ public class MainActivity extends BaseActivity<MainPresenter> implements IMainVi
 
     @Override
     public void onBookDataSuccess(GitLoginData data) {
-        bookTextView.setText(data.toString());
+        mLoginInfo.setText(data.toString());
     }
 
     @Override
     public void onPhoneDataSuccess(GitLoginData data) {
-        phoneTextView.setText(data.toString());
+        mBookInfo.setText(data.toString());
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
+
 }

@@ -22,7 +22,7 @@ import java.util.Map;
 public class VolleyHttpProcessor implements IHttpProcessor {
 
     @Override
-    public void get(String url, Map<String, String> params, final HttpCallBack httpCallBack) {
+    public void get(String url, final HttpCallBack httpCallBack) {
 
         RequestQueue mQueue = Volley.newRequestQueue(MvpApplication.sContext);
 
@@ -41,8 +41,6 @@ public class VolleyHttpProcessor implements IHttpProcessor {
         });
         //volley第三步
         mQueue.add(stringRequest);
-
-
     }
 
     @Override

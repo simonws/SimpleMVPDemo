@@ -1,5 +1,6 @@
 package com.example.administrator.mvpdemo.constant.datamanager.network;
 
+import com.example.administrator.app.MvpApplication;
 import com.google.gson.Gson;
 
 import java.lang.reflect.ParameterizedType;
@@ -14,8 +15,14 @@ public abstract class HttpCallBack<Result> implements IHttpCallBack {
     public void onSuccess(String result) {
         Gson gson = new Gson();
         Class<?> clz = analyseClass(this);
-        Result objResult = (Result) gson.fromJson(result, clz);
-        onSuccess(objResult);
+        final Result objResult = (Result) gson.fromJson(result, clz);
+        MvpApplication.getsHandler().post(new Runnable() {
+            @Override
+            public void run() {
+                onSuccess(objResult);
+            }
+        });
+
     }
 
     private Class<?> analyseClass(Object object) {
