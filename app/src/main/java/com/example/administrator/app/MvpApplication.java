@@ -5,9 +5,7 @@ import android.content.Context;
 import android.os.Handler;
 
 import com.example.administrator.mvpdemo.constant.datamanager.network.HttpHelper;
-import com.example.administrator.mvpdemo.constant.datamanager.network.retrofit.OkhttpProcessor;
-
-import java.util.logging.LogRecord;
+import com.example.administrator.mvpdemo.constant.datamanager.network.okhttp.OkhttpProcessor;
 
 /**
  * Created by ws on 18-5-11.

@@ -4,7 +4,7 @@ package com.example.administrator.mvpdemo.constant.presenter;
 import com.example.administrator.mvpdemo.constant.Constants;
 import com.example.administrator.mvpdemo.constant.datamanager.network.HttpCallBack;
 import com.example.administrator.mvpdemo.constant.datamanager.network.HttpHelper;
-import com.example.administrator.mvpdemo.constant.datamanager.network.retrofit.GitLoginData;
+import com.example.administrator.mvpdemo.constant.bean.GitLoginData;
 import com.example.administrator.mvpdemo.ui.activity.MainActivity;
 
 import java.util.HashMap;

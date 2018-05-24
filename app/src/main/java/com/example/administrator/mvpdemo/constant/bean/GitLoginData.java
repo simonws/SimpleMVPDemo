@@ -1,4 +1,4 @@
-package com.example.administrator.mvpdemo.constant.datamanager.network.retrofit;
+package com.example.administrator.mvpdemo.constant.bean;
 
 /**
  * Created by ws on 18-4-9.

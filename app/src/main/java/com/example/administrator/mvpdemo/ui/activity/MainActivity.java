@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.mvpdemo.R;
-import com.example.administrator.mvpdemo.constant.datamanager.network.retrofit.GitLoginData;
+import com.example.administrator.mvpdemo.constant.bean.GitLoginData;
 import com.example.administrator.mvpdemo.constant.iview.IMainView;
 import com.example.administrator.mvpdemo.constant.presenter.MainPresenter;
 import com.example.administrator.mvpdemo.constant.presenter.PresenterFactory;
